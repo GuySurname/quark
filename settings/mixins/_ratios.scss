@@ -1,0 +1,33 @@
+/**
+ * Ratios
+ */
+
+$ratios: (
+	16x9:56.25%,
+	4x3:75%,
+	3x2:66.66%,
+	1x1:100%
+);
+
+@mixin ratio($name) {
+
+	position:relative;
+	height:0px;
+
+	$value: map-get($ratios, $name);
+		padding-top:$value;	
+}
+
+@if($outputmixinsasclass or $ratioClass) {
+
+	.ratio {
+		position:relative;
+		height:0px;
+	}
+
+	@each $ratio, $percentage in $ratios {
+		.ratio--#{$ratio} {
+			padding-top:#{$percentage};
+		}
+	}
+}

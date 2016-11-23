@@ -1,0 +1,63 @@
+.l-block {
+    display:block;
+    padding-left:map-get($gutters, default);
+    padding-right:map-get($gutters, default);
+    margin-left:auto;
+    margin-right:auto;
+    overflow:hidden;
+
+    @if($use-corsets) {
+
+	    &--corset {
+	        width:100%;
+	        max-width:map-get($corsets, default)
+	    }
+
+	    /*
+	    Output the corsets
+	    */
+		@each $corset, $value in $corsets {
+	    	
+			@if $corset != "default" {
+		    	&--#{$corset}-corset {
+		    		max-width:$value;
+		    	}
+		    }
+	    }
+	}
+
+
+
+	/*
+	Output the gutters. By default it uses the 'default' gutter in config.scss
+	*/
+    @each $gutter, $value in $gutters {
+    	
+		@if $gutter != "default" {
+	    	&--#{$gutter}-gutter {
+	    		padding-left:$value;
+	    		padding-right:$value;
+	    	}
+	    }
+    }
+
+
+	@if($use-flushes) {
+		/*
+		Flushes
+		*/
+	    &--flush {
+	        padding-left:0px;
+	        padding-right:0px;
+	    }
+		@each $name, $value in $breakpoints {
+			&--flush\@#{$name} {
+
+				@include mq($name) {
+					padding-left:0px;
+					padding-right:0px;
+				}
+			}
+		};
+	}
+}

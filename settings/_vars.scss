@@ -1,0 +1,25 @@
+/**
+ * Font stacks
+ */
+$primarystack:          'ElectraLTStd', Arial, Helvetica, Arial,sans-serif;
+$secondarystack:        'Futura', Arial, Helvetica, Arial,sans-serif;
+
+
+/**
+ * Mobile nav vars, for use with disruptNav
+ */
+$mobile-nav-width:      412px;
+$mobile-nav-height:     50px;
+$mobile-nav-duration:   300ms;
+$header-height:         90px;
+$activities-header-height:$header-height + 50px;
+
+/**
+ * SassMap Colours
+ */
+$palettes: (
+	'brand': #FFFC00,
+	'gray':#999,
+	'gray--dark':#272727,
+	'gray--faint': #e6e6e6,
+); 

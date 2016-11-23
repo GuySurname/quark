@@ -1,0 +1,22 @@
+@if($devmode) {
+	body:after {
+		content:'base';
+		position: fixed;
+		top:10px;
+		left: 10px;
+		background-color:rgba(0,0,0,0.2);
+		border-radius:10px;
+		font-family:sans-serif;
+		color:#fff;
+		font-size:10px;
+		padding:5px 10px;
+		text-transform:uppercase;
+	}
+	@each $name, $value in $breakpoints {
+		@include mq($name) {
+			body:after{
+				content:'#{$name}';
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+// Non-declarative Mixins.
+// Purely functional and output no declarations themselves
+@import "mixins/media-query";
+@import "mixins/font-size";
+@import "mixins/getcolor";
+@import "mixins/block-extension";
+
+// Declarative Mixins.
+// These will output styles into the selector you invoke them within.
+@import "mixins/clearfix";
+@import "mixins/visuallyhidden";
+@import "mixins/table-layout";
+@import "mixins/pad";
+@import "mixins/ratios";
+@import "mixins/fillup";
+@import "mixins/display";
+@import "mixins/hideshow";
+
+// Declarative Mixins without output classes
+@import "mixins/truncate";
+@import "mixins/vcenter";
+@import "mixins/clicktransition";

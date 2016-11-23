@@ -1,0 +1,17 @@
+/**
+ * Clearfix
+ */
+@mixin cf {
+    &:after { 
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@if($outputmixinsasclass or $clearfixClass) {
+	.cf,
+	.clearfix {
+		@include cf;
+	}
+}

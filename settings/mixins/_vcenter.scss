@@ -1,0 +1,16 @@
+/**
+ * Vertical center in the unkown.
+ * Apply this mixin and to a parent, and supply the target as the parameter
+ */
+@mixin vcenter($selector) {
+	&:before {
+		content: '';
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#{$selector} {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

@@ -1,0 +1,85 @@
+
+$devmode: false;
+
+
+
+/* ---------------------------------------------------
+ * Mixins
+ */
+
+$outputmixinsasclass:false;
+
+$clearfixClass:true;
+$visuallyhiddenClass:true;
+$tableClass:true;
+$padClass:true;
+$ratioClass:true;
+$fillupClass:true;
+$displayClass:true;
+$hideshowClass:true;
+
+/* ------------------------------------------------ */
+
+/* ---------------------------------------------------
+ * Media queries
+ */
+
+$breakpoints: (
+	palm: 480px,
+	lap: 740px,
+	desk: 960px,
+	desk-wide: 1100px,
+	full-width: 1000px,
+);
+
+@function breakpoints($key) {
+	@return map-get($breakpoints, $key);
+};
+/* ------------------------------------------------ */
+
+
+
+/* ---------------------------------------------------
+ * Width divisions
+ */
+$width-config: (
+	halves:true,
+	thirds:true,
+	quarters:true,
+	fifths:false,
+	sixths:false,
+	eighths:false,
+	tenths:false,
+	twelfths:false,
+);
+
+@function width-config($key) {
+	@return map-get($width-config, $key);
+};
+/* ------------------------------------------------ */
+
+
+
+/* ---------------------------------------------------
+ * Gutters
+ */
+
+$gutters: (
+	default:20px,
+	large:50px,
+);
+@function gutter($key) {
+	@return map-get($gutters, $key);
+};
+
+/* ---------------------------------------------------
+ * Block variables and settings
+ */
+$use-corsets: true;
+$use-flushes: true;
+
+$corsets: (
+	default: 1200px,
+	thin: 1000px,
+);
+/* ------------------------------------------------ */

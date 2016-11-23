@@ -1,0 +1,27 @@
+.grid--orphanless-alternatequarters {
+
+    .grid__item {
+        width:25%;
+    }
+
+    .grid__item:only-child {
+        width:100% !important;
+    }
+
+    .grid__item:nth-child(3n),
+    .grid__item:nth-child(3n+1):last-child,
+    .grid__item:nth-child(6n+1):nth-last-child(4),
+    .grid__item:nth-child(6n+1):nth-last-child(4) ~ .grid__item,
+    .grid__item:nth-child(6n+4):nth-last-child(4),
+    .grid__item:nth-child(6n+4):nth-last-child(4) ~ .grid__item {
+        width: 25%;
+    }
+
+    .grid__item:nth-child(6n+1),
+    .grid__item:nth-child(6n+6),
+    .grid__item:nth-child(6n+2):last-child,
+    .grid__item:nth-child(6n+4):nth-last-child(2),
+    .grid__item:nth-child(6n+4):nth-last-child(2) ~ .grid__item {
+        width: 50%;
+    }
+}

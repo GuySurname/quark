@@ -1,0 +1,13 @@
+/**
+ * Returns a color from the $palette variable in _vars.scss
+ */
+@function deepcolor($palette, $tone:null) {
+    @if ($tone == null) {
+        $tone: $palette;
+        $palette : 'primary';
+    }
+	@return map-get(map-get($palettes, $palette), $tone);
+}
+@function color($palette, $tone:null) {
+	@return map-get($palettes, $palette);
+}

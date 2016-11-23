@@ -1,0 +1,42 @@
+/**
+ * Classes for hiding and showing
+ */
+
+@mixin hide($breakpoint) {
+	@include mq($breakpoint) {
+		display:none;
+	}
+}
+
+@mixin show($breakpoint) {
+	@include mq($breakpoint) {
+		display:block;
+	}
+}
+
+@if($outputmixinsasclass or $hideshowClass) {
+	.show {
+		display:block;
+	}
+
+	.hide {
+		display:block;
+	}
+
+	@each $name, $value in $breakpoints {
+		@include mq($name) {
+			.show\@#{$name} {
+				display:block;
+			}
+		}
+	}
+
+	@each $name, $value in $breakpoints {
+		@include mq($name) {
+			.hide\@#{$name} {
+				display:none;
+			}
+		}
+	}
+}
+

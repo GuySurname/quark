@@ -1,0 +1,34 @@
+/**
+ * Table Layout
+ * Usage: @include table(optional selector to pass to behave as a vcentered cell);
+ * Alternate usage: @inlude cell - to make an element behave like a vcentered cell.
+ */
+
+@mixin table($cell:null) {
+	display:table;
+	height:100%;
+	width:100%;
+
+	@if($cell) {
+		#{$cell} {
+			@include cell;
+		}
+	}
+}
+
+@mixin cell {
+	display:table-cell;
+	vertical-align: middle;
+	height:100%;
+	width:100%;
+}
+
+@if($outputmixinsasclass or $tableClass) {
+	.table {
+		@include table;
+	}
+
+	.cell {
+		@include cell;
+	}
+}

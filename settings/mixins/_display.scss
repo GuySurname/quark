@@ -1,0 +1,60 @@
+/**
+ * Inline, inline-block, block
+ */
+
+@mixin inline($breakpoint) {
+	@include mq($breakpoint) {
+		display:inline;
+	}
+}
+
+@mixin inline-block($breakpoint) {
+	@include mq($breakpoint) {
+		display:inline-block
+	}
+}
+
+@mixin block($breakpoint) {
+	@include mq($breakpoint) {
+		display:block
+	}
+}
+
+@if($outputmixinsasclass or $displayClass){
+
+	.inline {
+	    display:inline;
+	}
+
+	@each $name, $value in $breakpoints {
+		@include mq($name) {
+			.inline\@#{$name} {
+				display:inline;
+			}
+		}
+	}
+
+	.inline-block {
+	    display:inline-block;
+	}
+
+	@each $name, $value in $breakpoints {
+		@include mq($name) {
+			.inline-block\@#{$name} {
+				display:inline-block;
+			}
+		}
+	}
+
+	.block {
+	    display:block;
+	}
+
+	@each $name, $value in $breakpoints {
+		@include mq($name) {
+			.block\@#{$name} {
+				display:block;
+			}
+		}
+	}
+}

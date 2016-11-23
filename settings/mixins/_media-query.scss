@@ -1,0 +1,30 @@
+@mixin mq($breakpoint) {
+	$value: map-get($breakpoints, $breakpoint);
+	@if $value != null {
+		@media (min-width:$value) {
+			@content;
+		}
+	}
+
+	@else {
+		@warn "Doesn't look like a valid breakpoint.";
+	}
+}
+
+@mixin retina(){
+	@media (-webkit-min-device-pixel-ratio:1.25), (min-resolution: 120dpi) {
+		@content;
+	}
+}
+
+@mixin portrait {
+	@media (orientation:portrait) {
+		@content;
+	}
+}
+
+@mixin landscape {
+	@media (orientation:landscape) {
+		@content;
+	}
+}

@@ -1,0 +1,14 @@
+/**
+ * Block Extension
+ * This mixin allows you to declutter your markup
+ * should you choose, and use purely the modifier
+ * without needing to include the block class as well
+ */
+
+@mixin be($blockSelector) {
+	[class^="#{$blockSelector}--"],
+	[class*=" #{$blockSelector}--"],
+	.#{$blockSelector}, {
+		@content;
+	}
+}

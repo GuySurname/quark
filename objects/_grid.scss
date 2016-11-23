@@ -1,0 +1,74 @@
+.l-grid {
+	
+	// Pulls the default gutter size from config.scss
+	$gutter: map-get($gutters, default);
+
+	margin-left:-$gutter;
+	margin-bottom:-$gutter;
+	font-size:0px;
+
+	&__item {
+		padding-left:$gutter;
+		margin-bottom:$gutter;
+		display:inline-block;
+		font-size:12px;
+		vertical-align: top;
+		width:100%;
+	}
+
+	@each $name, $value in $gutters {
+
+		@if($name != 'default') {
+			&--#{$name} {
+				margin-left:-$value;
+
+				.l-grid__item {
+					padding-left:$value;
+					padding-bottom:$value;
+				}
+			}
+		}
+	}
+
+	&--no-gutter {
+		margin-left:0px;
+		margin-right:0px;
+		margin-bottom:0px;
+
+		.l-grid__item {
+			padding-left:0px;
+			padding-right:0px;
+			margin-bottom:0px;
+		}
+	}
+
+	&--no-vgutter {
+		margin-left:0px;
+		margin-right:0px;
+
+		.l-grid__item {
+			padding-left:0px;
+			padding-right:0px;
+		}
+	}
+
+	&--no-hgutter {
+		margin-bottom:0px;
+
+		.l-grid__item {
+			margin-bottom:0px;
+		}
+	}
+
+	&--right {
+		text-align:right;
+	}
+
+	&--center {
+		text-align:center;
+	}
+
+	&--rtl {
+		direction:rtl;
+	}
+}

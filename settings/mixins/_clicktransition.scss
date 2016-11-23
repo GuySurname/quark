@@ -1,0 +1,17 @@
+/*
+ Hover/click transition.
+ Has the appropriate eases for hover on/off
+ and 0 transition duration for the active state
+ */
+
+@mixin clicktransition($duration) {
+	transition:($duration / 2) ease-out;
+
+	&:hover {
+		transition:$duration ease-in;
+	}
+
+	&:active {
+		transition-duration:0ms;
+	}
+}

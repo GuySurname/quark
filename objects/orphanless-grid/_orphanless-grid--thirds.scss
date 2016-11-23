@@ -1,0 +1,23 @@
+
+.grid--orphanless-thirds {
+
+    .grid__item {
+        width:50%;
+    }
+
+    .grid__item:first-child:nth-last-child(3n),
+    .grid__item:first-child:nth-last-child(3n) ~ .grid__item, 
+    .grid__item:first-child:nth-last-child(4n) ~ .grid__item,
+    .grid__item:first-child:nth-last-child(5n) ~ .grid__item,
+    .grid__item:first-child:nth-last-child(6n) ~ .grid__item {
+        width: 33.33%;
+    }
+
+    .grid__item:first-child:nth-last-child(4n) {
+        width: 100%;
+    }
+
+    .grid__item:only-child {
+        width:100% !important;
+    }
+}

@@ -1,0 +1,41 @@
+/**
+ * Paddings
+ */
+@mixin pad($axis, $guttername:default) {
+
+	$gutter:map-get($gutters,$guttername);
+
+	@if $axis == 'vh' or $axis == 'hv' {
+		padding:$gutter;
+	};
+
+	@if $axis == 'v' {
+		padding-top:$gutter;
+		padding-bottom:$gutter;
+	};
+
+	@if $axis == 'h' {
+		padding-left:$gutter;
+		padding-right:$gutter;
+	};
+}
+
+@if($outputmixinsasclass or $padClass) {
+	@each $gutter, $value in $gutters {
+		
+		.pad-v--#{$gutter}-gutter {
+			padding-top:$value;
+			padding-bottom:$value;
+		}
+
+		.pad-h--#{$gutter}-gutter {
+			padding-left:$value;
+			padding-right:$value;
+		}
+
+		.pad-vh--#{$gutter}-gutter,
+		.pad-hv--#{$gutter}-gutter {
+			padding:$value;
+		}
+	}
+}

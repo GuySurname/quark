@@ -1,0 +1,16 @@
+/**
+ * Mixin to fill one item with another by positioning it absolutely
+ */
+@mixin fillup {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+}
+
+@if($outputmixinsasclass or $fillupClass) {
+	.fillup {
+		@include fillup;
+	}
+}

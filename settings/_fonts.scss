@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Futura';
+  src: url('../fonts/Futura-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('../fonts/Futura-CondensedExtraBold.woff') format('woff');
+  font-stretch:condensed;
+}
+
+@font-face {
+  font-family: 'ElectraLTStd';
+  src: url('../fonts/ElectraLTStd-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ElectraLTStd';
+  src: url('../fonts/ElectraLTStd-Cursive.woff') format('woff');
+  font-style:italic;
+}
+
+@font-face {
+  font-family: 'ElectraLTStd';
+  src: url('../fonts/ElectraLTStd-Bold.woff') format('woff');
+  font-weight:bold;
+}

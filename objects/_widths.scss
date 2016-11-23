@@ -1,0 +1,150 @@
+@mixin width-setup($namespace: "") {	
+
+	@if $namespace != '' {
+
+		.l-one-whole\@#{$namespace}         { width:percentage(1/1); }
+
+		@if (width-config(halves) == true) {
+			.l-one-half\@#{$namespace}         { width:percentage(1/2); }
+		}
+
+		@if (width-config(thirds) == true) {
+			.l-one-third\@#{$namespace}         { width:percentage(1/3); }
+			.l-two-thirds\@#{$namespace}        { width:percentage(2/3); }
+		}
+
+		@if (width-config(quarters) == true) {
+			.l-one-quarter\@#{$namespace}       { width:percentage(1/4); }
+			.l-two-quarters\@#{$namespace}      { width:percentage(2/4); }
+			.l-three-quarters\@#{$namespace}    { width:percentage(3/4); }
+		}
+
+		@if (width-config(fifths) == true) {
+			.l-one-fifth\@#{$namespace}         { width:percentage(1/5); }
+			.l-two-fifths\@#{$namespace}        { width:percentage(2/5); }
+			.l-three-fifths\@#{$namespace}      { width:percentage(3/5); }
+			.l-four-fifths\@#{$namespace}       { width:percentage(4/5); }
+		}
+
+		@if (width-config(sixths) == true) {
+			.l-one-sixth\@#{$namespace}         { width:percentage(1/6); }
+			.l-two-sixths\@#{$namespace}        { width:percentage(2/6); }
+			.l-three-sixths\@#{$namespace}      { width:percentage(3/6); }
+			.l-four-sixths\@#{$namespace}       { width:percentage(4/6); }
+			.l-five-sixths\@#{$namespace}       { width:percentage(5/6); }
+		}
+
+		@if (width-config(eighths) == true) {
+			.l-one-eighth\@#{$namespace}        { width:percentage(1/8); }
+			.l-two-eighths\@#{$namespace}       { width:percentage(2/8); }
+			.l-three-eighths\@#{$namespace}     { width:percentage(3/8); }
+			.l-four-eighths\@#{$namespace}      { width:percentage(4/8); }
+			.l-five-eighths\@#{$namespace}      { width:percentage(5/8); }
+			.l-six-eighths\@#{$namespace}       { width:percentage(6/8); }
+			.l-seven-eighths\@#{$namespace}     { width:percentage(7/8); }
+		}
+
+		@if (width-config(tenths) == true) {
+			.l-one-tenth\@#{$namespace}         { width:percentage(1/10); }
+			.l-two-tenths\@#{$namespace}        { width:percentage(2/10); }
+			.l-three-tenths\@#{$namespace}      { width:percentage(3/10); }
+			.l-four-tenths\@#{$namespace}       { width:percentage(4/10); }
+			.l-five-tenths\@#{$namespace}       { width:percentage(5/10); }
+			.l-six-tenths\@#{$namespace}        { width:percentage(6/10); }
+			.l-seven-tenths\@#{$namespace}      { width:percentage(7/10); }
+			.l-eight-tenths\@#{$namespace}      { width:percentage(8/10); }
+			.l-nine-tenths\@#{$namespace}       { width:percentage(9/10); }
+		}
+
+		@if (width-config(twelfths) == true) {
+			.l-one-twelfth\@#{$namespace}       { width:percentage(1/12); }
+			.l-two-twelfths\@#{$namespace}      { width:percentage(2/12); }
+			.l-three-twelfths\@#{$namespace}    { width:percentage(3/12); }
+			.l-four-twelfths\@#{$namespace}     { width:percentage(4/12); }
+			.l-five-twelfths\@#{$namespace}     { width:percentage(5/12); }
+			.l-six-twelfths\@#{$namespace}      { width:percentage(6/12); }
+			.l-seven-twelfths\@#{$namespace}    { width:percentage(7/12); }
+			.l-eight-twelfths\@#{$namespace}    { width:percentage(8/12); }
+			.l-nine-twelfths\@#{$namespace}     { width:percentage(9/12); }
+			.l-ten-twelfths\@#{$namespace}      { width:percentage(10/12); }
+			.l-eleven-twelfths\@#{$namespace}   { width:percentage(11/12); }
+		}
+
+	} @else {
+
+		.l-one-whole         { width:percentage(1/1); }
+
+		@if (width-config(halves) == true) {
+			.l-one-half         { width:percentage(1/2); }
+		}
+
+		@if (width-config(thirds) == true) {
+			.l-one-third         { width:percentage(1/3); }
+			.l-two-thirds        { width:percentage(2/3); }
+		}
+
+		@if (width-config(quarters) == true) {
+			.l-one-quarter       { width:percentage(1/4); }
+			.l-two-quarters      { width:percentage(2/4); }
+			.l-three-quarters    { width:percentage(3/4); }
+		}
+
+		@if (width-config(fifths) == true) {
+			.l-one-fifth         { width:percentage(1/5); }
+			.l-two-fifths        { width:percentage(2/5); }
+			.l-three-fifths      { width:percentage(3/5); }
+			.l-four-fifths       { width:percentage(4/5); }
+		}
+
+		@if (width-config(sixths) == true) {
+			.l-one-sixth         { width:percentage(1/6); }
+			.l-two-sixths        { width:percentage(2/6); }
+			.l-three-sixths      { width:percentage(3/6); }
+			.l-four-sixths       { width:percentage(4/6); }
+			.l-five-sixths       { width:percentage(5/6); }
+		}
+
+		@if (width-config(eighths) == true) {
+			.l-one-eighth        { width:percentage(1/8); }
+			.l-two-eighths       { width:percentage(2/8); }
+			.l-three-eighths     { width:percentage(3/8); }
+			.l-four-eighths      { width:percentage(4/8); }
+			.l-five-eighths      { width:percentage(5/8); }
+			.l-six-eighths       { width:percentage(6/8); }
+			.l-seven-eighths     { width:percentage(7/8); }
+		}
+
+		@if (width-config(tenths) == true) {
+			.l-one-tenth         { width:percentage(1/10); }
+			.l-two-tenths        { width:percentage(2/10); }
+			.l-three-tenths      { width:percentage(3/10); }
+			.l-four-tenths       { width:percentage(4/10); }
+			.l-five-tenths       { width:percentage(5/10); }
+			.l-six-tenths        { width:percentage(6/10); }
+			.l-seven-tenths      { width:percentage(7/10); }
+			.l-eight-tenths      { width:percentage(8/10); }
+			.l-nine-tenths       { width:percentage(9/10); }
+		}
+
+		@if (width-config(twelfths) == true) {
+			.l-one-twelfth       { width:percentage(1/12); }
+			.l-two-twelfths      { width:percentage(2/12); }
+			.l-three-twelfths    { width:percentage(3/12); }
+			.l-four-twelfths     { width:percentage(4/12); }
+			.l-five-twelfths     { width:percentage(5/12); }
+			.l-six-twelfths      { width:percentage(6/12); }
+			.l-seven-twelfths    { width:percentage(7/12); }
+			.l-eight-twelfths    { width:percentage(8/12); }
+			.l-nine-twelfths     { width:percentage(9/12); }
+			.l-ten-twelfths      { width:percentage(10/12); }
+			.l-eleven-twelfths   { width:percentage(11/12); }
+		}
+	}
+
+}
+
+@include width-setup;
+
+@each $name, $value in $breakpoints {
+	@include width-setup($name);
+}

@@ -1,0 +1,13 @@
+.grid--orphanless-halves {
+
+    .grid__item,
+    .grid__item:nth-child(2n+1) {
+        width:50%;
+    }
+    .grid__item:only-child {
+        width:100% !important;
+    }
+    .grid__item:nth-last-child(odd):first-child {
+        width:100%;
+    }
+}

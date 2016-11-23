@@ -1,0 +1,78 @@
+/* ================
+   Typography
+   ================ */
+
+// GIGA, MEGA, KILO
+// Used for headers and other places where you need to break outside
+// a standard heading heirarchy with something huge
+.giga {}
+.mega {}
+.kilo {}
+
+
+
+$fs--alpha: (
+	default : 30px,
+	lap : 35px,
+	desk : 40px,
+	desk-wide : 60px
+);
+.alpha {
+	@include font-size($fs--alpha);
+}
+
+
+$fs--beta: (
+	default : 18px,
+	lap : 22px,
+	desk : 28px,
+	desk-wide : 36px
+);
+.beta {
+   @include font-size($fs--beta);
+}
+
+
+$fs--gamma: (
+	default : 16px,
+	lap : 18px,
+	desk : 20px,
+	desk-wide : 28px
+);
+.gamma {
+	@include font-size($fs--gamma);
+}
+
+$fs--delta: (
+	default : 14px,
+	lap : 16px,
+	desk : 18px,
+	desk-wide : 22px
+);
+.delta {
+	@include font-size($fs--delta);
+}
+
+$fs--p: (
+	default : 14px,
+	lap : 15px,
+	desk : 16px,
+	desk-wide : 18px
+);
+
+p {
+	@include font-size($fs--p);
+	line-height:1.2;
+}
+
+.non-list {
+	@include font-size($fs--p);
+	line-height:1.2;
+	margin:0px;
+	padding:0px;
+	list-style-type: none;
+
+	li {
+		margin-bottom: .6em;
+	}
+}
