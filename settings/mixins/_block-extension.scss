@@ -5,10 +5,12 @@
  * without needing to include the block class as well
  */
 
-@mixin be($blockSelector) {
-	[class^="#{$blockSelector}--"],
-	[class*=" #{$blockSelector}--"],
-	.#{$blockSelector}, {
-		@content;
+
+@mixin extendBlock($selector:&) {
+	$slicedSelector: str-replace('#{$selector}','.','');
+	@at-root
+	[class^="#{$slicedSelector}--"],
+	[class*=" #{$slicedSelector}--"] {
+		@extend #{$selector};
 	}
 }

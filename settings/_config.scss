@@ -1,4 +1,3 @@
-
 $devmode: false;
 
 
@@ -7,16 +6,16 @@ $devmode: false;
  * Mixins
  */
 
-$outputmixinsasclass:false;
+$outputmixinsasclass:true;
 
-$clearfixClass:true;
-$visuallyhiddenClass:true;
-$tableClass:true;
-$padClass:true;
-$ratioClass:true;
-$fillupClass:true;
-$displayClass:true;
-$hideshowClass:true;
+$clearfixClass:false;
+$visuallyhiddenClass:false;
+$tableClass:false;
+$padClass:false;
+$ratioClass:false;
+$fillupClass:false;
+$displayClass:false;
+$hideshowClass:false;
 
 /* ------------------------------------------------ */
 

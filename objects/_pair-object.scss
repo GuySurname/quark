@@ -1,0 +1,36 @@
+.l-pair {
+    @include cf();
+
+    $gutter: map-get($gutters, default);
+
+    &__object {
+        float:left;
+        margin-right:$gutter;
+        font-size:0px;
+    }
+
+    &__body {
+    	//
+    }
+
+    &--right {
+        .l-pair__object {
+            float:right;
+            margin-right:0px;
+            margin-left:$gutter;
+        }
+    }
+}
+
+@each $gutter, $value in $gutters {
+	@if($gutter != 'default') {
+		.l-pair--#{$gutter} {
+			.l-pair__object {
+				margin-right:$value;
+			}
+			&.l-pair--right .l-pair__object {
+				margin-left:$value;
+			}
+		}
+	}
+}
