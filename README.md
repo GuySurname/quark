@@ -2,9 +2,9 @@
 *Because right now I'm favouring the Atomic Design naming approach, apparently*
 
 ## Purpose
-I got tired of porting and gisting all the various snippets and chunklets of code from project to project (and employer to employer). This is my attempt at consolidating and making sense of my own methodology that's highly influenced by others. I'm 6'4" and *still* attempting to stand on the shoulders of giants.
+I got tired of porting and gisting all the various snippets and chunklets of code from project to project (and employer to employer). This is my attempt at consolidating and making sense of my own methodology that's highly influenced by others.
 
-It's currently more of a project boilerplate than a toolkit you would plug into your own project (though you can easily do that). There are some folder structures in place for things that are not objects or may not be used in your project.
+It's intended purpose is as a started and toolkit for your own projects. You can include it as a base for your own projects, or build within it.
 
 
 ## Methodologies employed
@@ -12,14 +12,13 @@ I dont believe any single methodology or approach will ever be all encompassing 
 
 - BEM
 - OOCSS
-- <s>Hungarian Notation</s> (Don't know if I'm feeling this anymore. It's great for code transparency, but it hurts my hands)
-- ITCSS
+- Hungarian Notation
 
 ## In the box:
 A reset, normalize, a devmode flag for some extra niceties (WIP), a pair-object, grid system, blocking system, a buncha mixins, a speculative CSS structure
 
 ## Where it is
-Realistically it's about 50% complete. There are more things I'd like to add to it, but for the most part it has the basic tools I require. I don't want to bloat it.
+Realistically it's about 50% complete. There are more things I'd like to add to it, but for the most part it has the basic tools I require.
 
 ## Where I want it to be
-I'd like to get some examples setup, a library of components and plugins. I'd like to document it properly so that the outside user can pick it up.
+I have plans to build out a pattern library of components and objects. Also it needs documentation.

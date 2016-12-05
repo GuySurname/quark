@@ -4,6 +4,19 @@
 			.o-#{$numerator}#{$widths-delimiter}#{$denominator}#{$breakpoint} {
 				width: percentage($numerator / $denominator);
 			}
+
+			@if($create-offsets == true) {
+				.u-push-#{$numerator}#{$widths-delimiter}#{$denominator}#{$breakpoint} {
+					position: relative;
+					right: auto;
+					left: ($numerator / $denominator) * 100%;
+				}
+				.u-pull-#{$numerator}#{$widths-delimiter}#{$denominator}#{$breakpoint} {
+					position: relative;
+					right: ($numerator / $denominator) * 100%;
+					left: auto;
+				}
+			}
 		}
 	}
 }
