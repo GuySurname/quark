@@ -12,8 +12,7 @@ I dont believe any single methodology or approach will ever be all encompassing 
 
 - BEM
 - OOCSS
-- <s>Hungarian Notation</s> (Don't know if I'm feeling this anymore. It's great for code transparency, but it hurts my hands)
-- ITCSS
+- Hungarian Notation
 
 ## In the box:
 A reset, normalize, a devmode flag for some extra niceties (WIP), a pair-object, grid system, blocking system, a buncha mixins, a speculative CSS structure
