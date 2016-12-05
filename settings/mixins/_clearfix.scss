@@ -9,7 +9,7 @@
     }
 }
 
-@if($outputmixinsasclass or $clearfixClass) {
+@if($outputMixinsAsClasses or $clearfixClass) {
 	.cf,
 	.clearfix {
 		@include cf;

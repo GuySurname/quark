@@ -20,7 +20,7 @@
 	}
 }
 
-@if($outputmixinsasclass or $displayClass){
+@if($outputMixinsAsClasses or $displayClass){
 
 	.inline {
 	    display:inline;

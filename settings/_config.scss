@@ -1,4 +1,4 @@
-$devmode: false;
+$devMode: false;
 
 
 
@@ -6,7 +6,7 @@ $devmode: false;
  * Mixins
  */
 
-$outputmixinsasclass:true;
+$outputMixinsAsClasses:true;
 
 $clearfixClass:false;
 $visuallyhiddenClass:false;
@@ -41,20 +41,13 @@ $breakpoints: (
 /* ---------------------------------------------------
  * Width divisions
  */
-$width-config: (
-	halves:true,
-	thirds:true,
-	quarters:true,
-	fifths:false,
-	sixths:false,
-	eighths:false,
-	tenths:false,
-	twelfths:false,
-);
 
-@function width-config($key) {
-	@return map-get($width-config, $key);
-};
+$width-fractions: 1 2 3 4 !default;
+$create-offsets: false !default;
+$widths-delimiter: \/ !default;
+$widths-breakpoint-namespace: \@ !default;
+
+
 /* ------------------------------------------------ */
 
 

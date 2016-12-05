@@ -23,7 +23,7 @@
 	width:100%;
 }
 
-@if($outputmixinsasclass or $tableClass) {
+@if($outputMixinsAsClasses or $tableClass) {
 	.table {
 		@include table;
 	}

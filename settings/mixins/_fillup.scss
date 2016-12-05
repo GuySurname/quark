@@ -9,7 +9,7 @@
 	width:100%;
 }
 
-@if($outputmixinsasclass or $fillupClass) {
+@if($outputMixinsAsClasses or $fillupClass) {
 	.fillup {
 		@include fillup;
 	}

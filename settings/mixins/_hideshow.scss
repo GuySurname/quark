@@ -14,7 +14,7 @@
 	}
 }
 
-@if($outputmixinsasclass or $hideshowClass) {
+@if($outputMixinsAsClasses or $hideshowClass) {
 	.show {
 		display:block;
 	}

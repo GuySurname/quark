@@ -1,4 +1,4 @@
-.l-pair {
+.o-pair {
     @include cf();
 
     $gutter: map-get($gutters, default);
@@ -14,7 +14,7 @@
     }
 
     &--right {
-        .l-pair__object {
+        .o-pair__object {
             float:right;
             margin-right:0px;
             margin-left:$gutter;
@@ -24,11 +24,11 @@
 
 @each $gutter, $value in $gutters {
 	@if($gutter != 'default') {
-		.l-pair--#{$gutter} {
-			.l-pair__object {
+		.o-pair--#{$gutter} {
+			.o-pair__object {
 				margin-right:$value;
 			}
-			&.l-pair--right .l-pair__object {
+			&.o-pair--right .o-pair__object {
 				margin-left:$value;
 			}
 		}

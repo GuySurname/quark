@@ -20,7 +20,7 @@
 	};
 }
 
-@if($outputmixinsasclass or $padClass) {
+@if($outputMixinsAsClasses or $padClass) {
 	@each $gutter, $value in $gutters {
 		
 		.pad-v--#{$gutter}-gutter {

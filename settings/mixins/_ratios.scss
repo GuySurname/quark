@@ -18,7 +18,7 @@ $ratios: (
 		padding-top:$value;	
 }
 
-@if($outputmixinsasclass or $ratioClass) {
+@if($outputMixinsAsClasses or $ratioClass) {
 
 	.ratio {
 		position:relative;

@@ -1,4 +1,4 @@
-@if($devmode) {
+@if($devMode) {
 	body:after {
 		content:'base';
 		position: fixed;
